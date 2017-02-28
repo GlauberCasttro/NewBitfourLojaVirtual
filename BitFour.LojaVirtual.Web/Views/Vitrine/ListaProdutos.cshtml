@@ -1,18 +1,17 @@
 ﻿@model BitFour.LojaVirtual.Web.Models.ProdutosViewModel
 @using BitFour.LojaVirtual.Web.HtmlHelpers
-           
+      
 
-@foreach (var p in Model.Produtos)
-{
-    <div>
-        <h3>
-            @p.NomeProduto
-            @p.Descricao
-            @p.Preco.ToString("c")
-        </h3>
-    </div>
-}
-
+    @foreach (var p in Model.Produtos)
+    {
+        <div class="teste1">
+            <h3>
+                @p.Nome
+                @p.Descricao
+                @p.Preco.ToString("c")
+            </h3>
+        </div>
+    }
 
 
 @Html.PageLinks(Model.Paginacao, x => Url.Action("ListaProdutos", new {pagina = x }))

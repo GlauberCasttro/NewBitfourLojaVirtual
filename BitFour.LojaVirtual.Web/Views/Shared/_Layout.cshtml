@@ -11,27 +11,26 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inner" role="navigation">
+    
+    <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#"> BitFour - Tecnology</a>
     </div>
-
-    <div class="row panel">
-        <div id="categorias" class="col-xs-3">
-            Minhas Categorias
+            
+        <div class="row panel">
+            <div id="categorias" class="col-xs-3">
+                <h3>Minhas Categorias</h3>
+            </div>
+            <div id="categorias" class="col-xs-2">
+                @RenderBody()
+            </div>
         </div>
+        <div class="container text-center">
 
-        <div id="categorias" class="col-xs-2">
-             @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - BitFour TECNOLOGY</p>
+            </footer>
         </div>
-    </div>
-
-    <div class="container text-center">
-   
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - BitFour TECNOLOGY</p>
-        </footer>
-    </div>
-  
+    
 </body>
 </html>
